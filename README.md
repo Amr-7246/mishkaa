@@ -1,26 +1,26 @@
-+ [Mishkaa]
+* Mishkaa
 
 Mishkaa is an academic teacher-focused educational platform designed to serve the Egyptian secondary school sector.
-
-The platform is centered around teachers and their academic workflows, providing a structured environment for managing educational content, students, assessments, academic activities, and the operational processes surrounding secondary education.
-
-The project was built with a focus on creating a scalable foundation that can support the specific requirements of the Egyptian education market while maintaining a clear separation between the frontend, backend, data layer, and business logic.
+The platform is centered around teacher marketing and academic workflows + student all-in-one feature not just course listing app 
 
 ## Project Overview
 
-Mishkaa aims to provide teachers with a centralized platform for managing their academic activities instead of relying on disconnected tools and manual workflows.
 
-The system is designed around the teacher as the primary user and can support workflows such as:
+Mishkaa aims to serve both: 
+* Teacher.. via providing him centralized platform for marketing themselves and managing their academic activities instead of relying on disconnected tools and manual workflows.
+* Student.. via providing him centralized platform that prevent his distraction between more than teacher website or youtube channels.
 
-* Managing academic content
-* Organizing educational materials
-* Managing students
-* Creating and managing assessments
+### Teacher features 
+* Treat the teacher portfolio as the thing to market instead of the plain courses
+* Secured courses hosting which is critical for them
+* Do the heavy load of the technical work instead of overwhelming the teacher of it
+* Dashboard provides the usual structured environment for managing educational content, students, assessments, academic activities, and the operational processes surrounding secondary education
+
+### Student features 
+* provide the one sound of truth to the student where centralize all of his subjects teachers at one place
+* Friendly UI/UX + secured payment cycle
 * Tracking academic activities
-* Managing courses and educational resources
-* Providing teacher-oriented dashboards
 * Supporting structured academic workflows
-* Managing platform data through administrative interfaces
 
 The architecture is designed so additional educational features can be introduced without requiring major changes to the existing system.
 
@@ -37,230 +37,29 @@ The initial target audience includes:
 
 The system can potentially be extended to support additional educational levels, subjects, institutions, and educational business models.
 
-## Core Concept
-
-The platform follows a teacher-centered approach.
-
-Instead of treating educational content as the only product, Mishkaa focuses on the complete workflow surrounding teachers and their students.
-
-A simplified workflow can be represented as:
-
-```text
-Teacher
-   |
-   +---- Courses
-   |
-   +---- Educational Content
-   |
-   +---- Students
-   |
-   +---- Assessments
-   |
-   +---- Academic Activities
-   |
-   +---- Performance / Tracking
-   |
-   +---- Dashboard
-```
-
-This approach allows the platform to evolve from a content-delivery application into a broader educational management platform.
-
 ## Technology Stack
 
 ### Frontend
 
-* React
 * TypeScript
-* Next.js
-* Modern component-based UI architecture
-* Responsive design
+* ReactNative
+* Expo
+* Modern component-based UI architecture (react native reusables)
+* tansStack (reactQuery) + Axios (network layer)
 
-### Backend
+### Backend + DB
 
 * Node.js
-* NestJS
 * TypeScript
-* RESTful APIs
-* Modular backend architecture
-
-### Database
-
+* NestJS
+* typeOrm
+* Cloudflare
 * PostgreSQL
 
-### Additional Technologies
-
-* Authentication and authorization
-* API validation
-* File and media management
-* State management
-* Git
-* GitHub
-* Environment-based configuration
-* Deployment and production configuration
-
 ## Architecture
-
-Mishkaa follows a layered architecture designed to keep business logic independent from presentation concerns.
-
-```text
-                    Client Applications
-                           |
-                           v
-                 React / Next.js Frontend
-                           |
-                           v
-                     REST API Layer
-                           |
-                           v
-                     NestJS Backend
-                           |
-              +------------+------------+
-              |            |            |
-              v            v            v
-         Auth Module   Academic      User Module
-                       Modules
-              |            |            |
-              +------------+------------+
-                           |
-                           v
-                     Business Logic
-                           |
-                           v
-                     Data Access Layer
-                           |
-                           v
-                       PostgreSQL
-```
-
-The backend is organized into independent modules so that domain-specific functionality can evolve without tightly coupling unrelated parts of the application.
-
 ## Backend Structure
-
-The backend is built around NestJS modules and follows a domain-oriented approach.
-
-Typical responsibilities are separated into:
-
-```text
-Authentication
-Users
-Teachers
-Students
-Courses
-Academic Content
-Assessments
-Academic Activities
-Administration
-```
-
-Each module is responsible for its own business rules and application logic while interacting with shared infrastructure where required.
-
-This structure provides a foundation for extending the application as the number of users, teachers, courses, and educational resources grows.
-
-## Authentication and Authorization
-
-The application includes an authentication layer designed around different platform roles.
-
-The authorization model allows access to be controlled according to the responsibilities of each user.
-
-The system can distinguish between roles such as:
-
-```text
-Teacher
-Student
-Administrator
-```
-
-Authorization is handled at the API level to ensure that permissions are enforced independently of the client application.
-
-This prevents the frontend from being treated as the primary security boundary.
-
-## Educational Domain
-
-The educational domain is modeled around the relationship between teachers, students, courses, and academic content.
-
-A simplified relationship can be represented as:
-
-```text
-Teacher
-   |
-   +---- Course
-           |
-           +---- Content
-           |
-           +---- Students
-           |
-           +---- Assessments
-                   |
-                   +---- Results
-```
-
-This allows the platform to represent academic workflows in a structured way rather than treating each feature as an isolated CRUD operation.
-
 ## Teacher Dashboard
-
-The teacher dashboard acts as the primary operational interface.
-
-It is designed to provide teachers with a centralized view of their academic activities.
-
-Potential dashboard responsibilities include:
-
-* Course management
-* Student management
-* Educational content management
-* Assessment management
-* Academic activity monitoring
-* Performance information
-* Platform notifications
-* Frequently used actions
-
-The dashboard architecture is designed to allow additional metrics and workflows to be introduced as the platform evolves.
-
 ## Content Management
-
-Educational content is treated as a first-class part of the platform.
-
-The system can support structured educational resources associated with courses and academic activities.
-
-Content can be organized according to the educational structure of the platform, allowing teachers to maintain a more consistent and searchable academic environment.
-
-The architecture also leaves room for future support for additional media and content types.
-
-## Assessment System
-
-Assessments are modeled as part of the academic workflow rather than as independent resources.
-
-The system can support concepts such as:
-
-```text
-Assessment
-   |
-   +---- Questions
-   |
-   +---- Students
-   |
-   +---- Submissions
-   |
-   +---- Results
-```
-
-This provides a foundation for expanding the assessment system with additional evaluation and performance-tracking capabilities.
-
-## API Design
-
-The backend exposes APIs consumed by the frontend application.
-
-The API layer is responsible for:
-
-* Request validation
-* Authentication
-* Authorization
-* Business logic execution
-* Data retrieval
-* Data mutation
-* Error handling
-* Consistent API responses
-
-The API structure is designed to keep frontend implementation independent from the underlying business logic.
 
 ## Data Modeling
 
@@ -327,7 +126,7 @@ TypeScript provides static typing across the frontend and backend, reducing inco
 
 NestJS provides a structured architecture for Node.js applications and encourages modularity, dependency injection, separation of concerns, and testable business logic.
 
-### Why Next.js?
+### Why Next.js (later)?
 
 Next.js provides a flexible React-based framework for building the web application while supporting different rendering and data-fetching strategies as the platform evolves.
 
@@ -336,21 +135,6 @@ Next.js provides a flexible React-based framework for building the web applicati
 The educational domain contains many strongly related entities and transactional workflows. PostgreSQL provides relational integrity, transactions, indexing, and mature querying capabilities suitable for this type of application.
 
 ## Challenges
-
-One of the main challenges of Mishkaa was translating educational workflows into a software architecture that remains flexible enough for future requirements.
-
-The project required thinking beyond individual screens and features and instead modeling relationships between:
-
-```text
-Teachers
-Students
-Courses
-Content
-Assessments
-Academic Activities
-```
-
-Another important consideration was maintaining a clear separation between presentation logic and business rules so that the platform could evolve without creating unnecessary coupling between modules.
 
 ## Future Improvements
 
@@ -383,7 +167,7 @@ A simplified representation of the project structure:
 ```text
 mishkaa/
 |
-+-- frontend/
++-- expo/
 |   +-- components/
 |   +-- pages/
 |   +-- features/
@@ -391,7 +175,7 @@ mishkaa/
 |   +-- services/
 |   +-- types/
 |
-+-- backend/
++-- nest/
 |   +-- modules/
 |   +-- common/
 |   +-- guards/
@@ -462,12 +246,6 @@ Mishkaa is developed around several principles:
 * Keep APIs predictable and maintainable
 * Build features around real educational workflows
 * Prefer extensibility over premature complexity
-
-## License
-
-This project is currently maintained as a private or portfolio project.
-
-License terms can be added here if the project is later released publicly.
 
 ## Author
 
