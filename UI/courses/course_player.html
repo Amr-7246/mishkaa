@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+
+<html class="dark" dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>مشغل الدرس التفاعلي والمصادر</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-tertiary-fixed-variant": "#474a00",
+            "surface-container-lowest": "#0c0e11",
+            "on-primary-fixed-variant": "#5a396f",
+            "tertiary": "#dfe38c",
+            "surface-container-highest": "#333538",
+            "on-surface-variant": "#cec3cf",
+            "surface": "#111316",
+            "on-background": "#e2e2e6",
+            "secondary": "#c0c7d3",
+            "inverse-primary": "#735188",
+            "on-secondary-fixed-variant": "#404752",
+            "error-container": "#93000a",
+            "primary-container": "#dcb3f2",
+            "outline-variant": "#4b444e",
+            "on-primary-fixed": "#2c0b40",
+            "on-tertiary-container": "#4f5309",
+            "outline": "#978e98",
+            "on-tertiary-fixed": "#1b1d00",
+            "background": "#111316",
+            "on-tertiary": "#303300",
+            "primary-fixed-dim": "#e1b7f7",
+            "on-surface": "#e2e2e6",
+            "primary-fixed": "#f4d9ff",
+            "on-secondary-container": "#afb5c2",
+            "inverse-on-surface": "#2f3034",
+            "on-primary-container": "#634278",
+            "on-error-container": "#ffdad6",
+            "tertiary-container": "#c3c773",
+            "surface-bright": "#37393d",
+            "surface-variant": "#333538",
+            "primary": "#f2d4ff",
+            "surface-dim": "#111316",
+            "tertiary-fixed": "#e4e890",
+            "error": "#ffb4ab",
+            "on-secondary-fixed": "#151c25",
+            "surface-container": "#1e2023",
+            "surface-tint": "#e1b7f7",
+            "on-primary": "#422256",
+            "secondary-container": "#404752",
+            "secondary-fixed": "#dce3f0",
+            "on-secondary": "#2a313b",
+            "on-error": "#690005",
+            "inverse-surface": "#e2e2e6",
+            "surface-container-high": "#282a2d",
+            "surface-container-low": "#1a1c1f",
+            "secondary-fixed-dim": "#c0c7d3",
+            "tertiary-fixed-dim": "#c8cc77"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "2xl": "1rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-xs": "0.25rem",
+            "space-md": "1rem",
+            "space-xl": "2.25rem",
+            "space-lg": "1.5rem",
+            "space-sm": "0.5rem",
+            "gutter": "1rem",
+            "margin": "1.25rem"
+          },
+          "fontFamily": {
+            "headline-lg-mobile": ["Noto Sans"],
+            "body-md": ["Noto Sans"],
+            "headline-lg": ["Noto Sans"],
+            "body-lg": ["Noto Sans"],
+            "label-md": ["Noto Sans"],
+            "label-lg": ["Noto Sans"],
+            "headline-sm": ["Noto Sans"],
+            "headline-md": ["Noto Sans"],
+            "headline-xl-mobile": ["Noto Sans"],
+            "label-sm": ["Noto Sans"],
+            "headline-xl": ["Noto Sans"],
+            "body-sm": ["Noto Sans"]
+          },
+          "fontSize": {
+            "headline-lg-mobile": ["24px", { "lineHeight": "34px", "fontWeight": "700" }],
+            "body-md": ["16px", { "lineHeight": "28px", "fontWeight": "400" }],
+            "headline-lg": ["30px", { "lineHeight": "44px", "fontWeight": "700" }],
+            "body-lg": ["18px", { "lineHeight": "32px", "fontWeight": "400" }],
+            "label-md": ["12px", { "lineHeight": "18px", "fontWeight": "500" }],
+            "label-lg": ["14px", { "lineHeight": "20px", "fontWeight": "600" }],
+            "headline-sm": ["18px", { "lineHeight": "28px", "fontWeight": "600" }],
+            "headline-md": ["20px", { "lineHeight": "30px", "fontWeight": "600" }],
+            "headline-xl-mobile": ["28px", { "lineHeight": "40px", "fontWeight": "700" }],
+            "label-sm": ["10px", { "lineHeight": "14px", "fontWeight": "500" }],
+            "headline-xl": ["36px", { "lineHeight": "52px", "fontWeight": "700" }],
+            "body-sm": ["14px", { "lineHeight": "24px", "fontWeight": "400" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    body {
+      font-family: 'Noto Sans', sans-serif;
+      background-color: #111316;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen flex justify-center">
+<!-- Mobile Simulator Container (Screen 3: Lesson Player) -->
+<main class="w-full max-w-md bg-surface-container-low min-h-screen flex flex-col relative pb-28 border-x border-outline-variant shadow-2xl">
+<!-- 1. Minimal Top Bar (Task-focused: close X, title, bookmark) -->
+<header class="sticky top-0 z-40 bg-surface-container-low/95 backdrop-blur-md px-5 py-3.5 flex items-center justify-between border-b border-outline-variant">
+<!-- Right: Close Button -->
+<button aria-label="إغلاق الدرس" class="w-9 h-9 rounded-2xl flex items-center justify-center bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-xl">close</span>
+</button>
+<!-- Center: Lesson Identity -->
+<div class="flex flex-col items-center text-center px-2 flex-1 min-w-0">
+<span class="font-label-sm text-label-sm text-primary-container tracking-wider">المحور الثاني • بنية الأنظمة</span>
+<h1 class="font-headline-sm text-headline-sm text-on-surface truncate w-full">الدرس 3: التوازي ومعالجة الخيوط</h1>
+</div>
+<!-- Left: Bookmark Affordance -->
+<button aria-label="حفظ في الإشارات المرجعية" class="w-9 h-9 rounded-2xl flex items-center justify-center bg-surface-container text-secondary hover:text-primary transition-colors" id="bookmarkBtn" onclick="toggleBookmark()" type="button">
+<span class="material-symbols-outlined text-xl" id="bookmarkIcon">bookmark_border</span>
+</button>
+</header>
+<!-- Content Scrollable Body -->
+<div class="flex-1 flex flex-col p-4 space-y-5">
+<!-- 2. Video Player Mockup (16:9 Aspect Ratio) -->
+<section class="relative w-full aspect-video bg-surface-container-lowest rounded-2xl overflow-hidden border border-outline-variant group">
+<!-- Visual Backdrop Placeholder for High-End Academic Presentation -->
+<div class="absolute inset-0 bg-cover bg-center opacity-40 mix-blend-luminosity" data-alt="A dark and moody academic computer science visualizer showing intricate multi-threaded network graphs and glowing code snippets on dark obsidian stone surfaces, illuminated by delicate pale violet and muted gold fiber optics with sharp architectural precision." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAXzI4zyrGB4rafKlGdZm3543AzfJ5XQt6lPze5cnhrXeBFnLmE7XZTFM0DJr6bQNXt9HZ2CYuDLXm3w8W3DtzxC5AOcLiNRv0poEOd6Y2F8_IEGrb5leiEiJYcxl_vrnI7Of2uYDQMRDADDqjYe61fhdoMv6lpXniBZVBxv_jTbLjE91sFmuKjjQTLaH8wqO6NvcJVuyZjBGpmcg0bx6uXVY57NJJG2k8r0-fBeHHwMIMZMRoLDgbP')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-surface-container-lowest/60"></div>
+<!-- Video Badge Top Right -->
+<div class="absolute top-3 right-3 z-10 flex items-center gap-1.5 bg-surface-container-lowest/80 backdrop-blur px-2.5 py-1 rounded-2xl border border-outline-variant">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-on-surface">بث فائق الدقة 1080p</span>
+</div>
+<!-- Center Play Button Overlay -->
+<div class="absolute inset-0 flex items-center justify-center z-10">
+<button aria-label="تشغيل الفيديو" class="w-14 h-14 rounded-2xl bg-primary-container/90 text-on-primary-fixed flex items-center justify-center shadow-lg transition-transform active:scale-95 hover:bg-primary-container" type="button">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+</div>
+<!-- Bottom Controller Bar -->
+<div class="absolute bottom-0 inset-x-0 p-3 z-10 flex flex-col space-y-2 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/80 to-transparent pt-6">
+<!-- Progress Scrubber Line -->
+<div class="relative w-full h-1.5 bg-surface-container-highest rounded-full overflow-hidden cursor-pointer">
+<div class="absolute top-0 right-0 h-full bg-primary-container w-[62%]"></div>
+<div class="absolute top-0 right-[62%] h-full w-2 bg-primary transform -translate-x-1/2 rounded-full"></div>
+</div>
+<!-- Time & Controls Cluster -->
+<div class="flex items-center justify-between font-label-md text-label-md text-secondary">
+<div class="flex items-center gap-2">
+<span class="font-mono text-on-surface text-xs" dir="ltr">12:34 / 20:00</span>
+</div>
+<div class="flex items-center gap-2.5 text-on-surface">
+<!-- Playback Speed Chip -->
+<button class="px-2 py-0.5 rounded-2xl bg-surface-container-highest border border-outline-variant text-xs text-primary-container font-mono hover:border-primary-container transition-colors" type="button">
+                1.0x
+              </button>
+<!-- Subtitles toggle -->
+<button aria-label="الترجمة النصية" class="text-secondary hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-lg">closed_caption</span>
+</button>
+<!-- Fullscreen Button -->
+<button aria-label="ملء الشاشة" class="text-secondary hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-lg">fullscreen</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. Tabs Row (Rounded-2xl modern pills) -->
+<nav aria-label="تبويبات الدرس" class="flex items-center space-x-reverse space-x-2 bg-surface-container p-1 rounded-2xl border border-outline-variant">
+<button class="flex-1 py-2 px-3 text-center rounded-2xl bg-primary-container text-on-primary-container font-label-lg text-label-lg transition-colors shadow-sm" type="button">
+          نظرة عامة
+        </button>
+<button class="flex-1 py-2 px-3 text-center rounded-2xl text-secondary hover:text-on-surface font-label-lg text-label-lg transition-colors" type="button">
+          الملاحظات
+        </button>
+<button class="flex-1 py-2 px-3 text-center rounded-2xl text-secondary hover:text-on-surface font-label-lg text-label-lg transition-colors" type="button">
+          المصادر والمرفقات
+        </button>
+</nav>
+<!-- Tab Content Area: Overview -->
+<section class="space-y-4">
+<!-- Lesson Narrative & Goals Card -->
+<article class="bg-surface-container-low border border-outline-variant rounded-2xl p-4 space-y-3">
+<div class="flex items-center gap-2">
+<span class="w-1 h-4 bg-primary-container rounded-full"></span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">ملخص المحتوى</h2>
+</div>
+<p class="font-body-sm text-body-sm text-secondary leading-relaxed">
+            يستكشف هذا الموديل المفاهيم الهيكلية للتوازي الحوسبي (Concurrency &amp; Parallelism)، مع التعمق في تنظيم الخيوط المتزامنة (Threads) وحل معضلات التسابق في الذاكرة المشتركة.
+          </p>
+<div class="pt-2 border-t border-outline-variant/60 space-y-2.5">
+<h3 class="font-label-lg text-label-lg text-on-surface">ماذا ستتعلم في هذا الدرس:</h3>
+<ul class="space-y-2 text-on-surface">
+<li class="flex items-start gap-2.5 text-body-sm">
+<span class="material-symbols-outlined text-primary-container text-lg mt-0.5" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-secondary font-body-sm text-body-sm">الفرق البنيوي بين العمليات المستقلة (Processes) والخيوط (Threads).</span>
+</li>
+<li class="flex items-start gap-2.5 text-body-sm">
+<span class="material-symbols-outlined text-primary-container text-lg mt-0.5" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-secondary font-body-sm text-body-sm">آليات الإقفال والمنع التبادلي (Mutex &amp; Semaphores) لحماية الموارد.</span>
+</li>
+<li class="flex items-start gap-2.5 text-body-sm">
+<span class="material-symbols-outlined text-primary-container text-lg mt-0.5" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-secondary font-body-sm text-body-sm">تحليل أمثلة شفرة تفاعلية لتفادي الانسداد المميت (Deadlock Prevention).</span>
+</li>
+</ul>
+</div>
+</article>
+<!-- Quick Attachments Section: Downloadable PDF -->
+<div class="space-y-2">
+<h2 class="font-label-lg text-label-lg text-secondary px-1">المرفقات والمراجع الأكاديمية</h2>
+<div class="bg-surface-container border border-outline-variant rounded-2xl p-3 flex items-center justify-between hover:border-primary-container/60 transition-all">
+<div class="flex items-center gap-3">
+<div class="w-11 h-11 rounded-2xl bg-surface-container-highest border border-outline-variant flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-2xl">picture_as_pdf</span>
+</div>
+<div>
+<p class="font-label-lg text-label-lg text-on-surface font-semibold">ملخص التوازي البرمجي.pdf</p>
+<span class="font-label-sm text-label-sm text-secondary">3.4 ميجابايت • 14 صفحة</span>
+</div>
+</div>
+<!-- Download Button -->
+<button aria-label="تحميل ملخص التوازي البرمجي" class="w-10 h-10 rounded-2xl bg-surface-container-high text-on-surface hover:text-primary-container hover:bg-surface-container-highest flex items-center justify-center transition-colors border border-outline-variant" type="button">
+<span class="material-symbols-outlined text-xl">cloud_download</span>
+</button>
+</div>
+</div>
+<!-- 4. Quiz Prerequisite Gate Card (Prerequisite verification) -->
+<aside class="relative overflow-hidden bg-surface-container border border-primary-container/30 rounded-2xl p-4">
+<!-- Ambient subtle glow behind card -->
+<div class="absolute -top-10 -left-10 w-28 h-28 bg-primary-container/10 rounded-full blur-2xl pointer-events-none"></div>
+<div class="flex items-start gap-3">
+<div class="w-10 h-10 rounded-2xl bg-primary-container/20 border border-primary-container/40 flex items-center justify-center text-primary-container flex-shrink-0">
+<span class="material-symbols-outlined text-2xl">quiz</span>
+</div>
+<div class="flex-1 min-w-0 space-y-1">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">فحص سريع للفهم — 5 أسئلة</h3>
+<span class="font-label-sm text-label-sm bg-primary-container/20 text-primary-container px-2 py-0.5 rounded-2xl font-bold">إلزامي</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary">
+                اجتياز هذا الاختبار القصير بدرجة لا تقل عن 80% شرط أساسي لإلغاء قفل الدرس الموالي ومواصلة المنهج.
+              </p>
+</div>
+</div>
+<!-- Bottom Action of the Quiz Card -->
+<div class="mt-4 pt-3 border-t border-outline-variant/60 flex items-center justify-between">
+<div class="flex items-center gap-1.5 text-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-base text-primary-container">timer</span>
+<span>الزمن المقدر: 4 دقائق</span>
+</div>
+<button class="px-4 py-2 bg-primary-container text-on-primary-fixed rounded-2xl font-label-lg text-label-lg font-bold flex items-center gap-1.5 shadow-sm active:scale-95 transition-all" type="button">
+<span>بدء الاختبار...</span>
+<span class="material-symbols-outlined text-base rtl:rotate-180">arrow_forward</span>
+</button>
+</div>
+</aside>
+</section>
+</div>
+<!-- 5. Sticky Bottom Action Bar (Previous / Next Locked) -->
+<footer class="fixed bottom-0 max-w-md w-full z-40 bg-surface-container-low/95 backdrop-blur-md px-4 py-3.5 border-t border-outline-variant flex items-center justify-between gap-3">
+<!-- Previous Lesson Action (Ghost / Outlined modern rounded) -->
+<button class="flex-1 py-2.5 px-3 rounded-2xl border border-outline-variant bg-surface-container hover:bg-surface-container-high text-on-surface font-label-lg text-label-lg flex items-center justify-center gap-1.5 transition-colors" type="button">
+<span class="material-symbols-outlined text-base rtl:rotate-180">arrow_back</span>
+<span>السابق</span>
+</button>
+<!-- Next Lesson Action (Disabled state with lock indicator) -->
+<button aria-disabled="true" class="flex-1 py-2.5 px-3 rounded-2xl bg-surface-container-highest/60 border border-outline-variant text-outline font-label-lg text-label-lg flex items-center justify-center gap-2 cursor-not-allowed opacity-80" disabled="" title="يجب اجتياز الاختبار لفتح هذا الدرس" type="button">
+<span>الدرس التالي</span>
+<span class="material-symbols-outlined text-base">lock</span>
+</button>
+</footer>
+</main>
+<script>
+    function toggleBookmark() {
+      const icon = document.getElementById('bookmarkIcon');
+      const btn = document.getElementById('bookmarkBtn');
+      if (icon.innerText === 'bookmark_border') {
+        icon.innerText = 'bookmark';
+        icon.style.fontVariationSettings = "'FILL' 1";
+        btn.classList.add('text-primary-container');
+        btn.classList.remove('text-secondary');
+      } else {
+        icon.innerText = 'bookmark_border';
+        icon.style.fontVariationSettings = "'FILL' 0";
+        btn.classList.remove('text-primary-container');
+        btn.classList.add('text-secondary');
+      }
+    }
+  </script>
+</body></html>

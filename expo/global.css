@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* colors */
+  :root {
+    /* //& base surfaces */
+    --background: 45 11% 90%;        /* #e8e8e2 - Warm off-white */
+    --foreground: #141414;
+    --card: 0 0% 100%;              /* #ffffff - White text on primary */
+    --card-foreground: #141414;       /* #000000 - Black text on cards */
+
+    --popover: 282 67% 85%;           /* #dcb3f2 - Matching cards */
+    --popover-foreground: #141414;    /* #000000 */
+
+    /*//& text */
+    --text: #141414;    
+    --text-inactive: #444444;    
+    --muted: 229 67% 83%;             /* #b3c3f2 - Soft periwinkle */
+    --muted-foreground: #141414;      /* #000000 */
+
+    /*//& brand and interactive */
+    --primary: 282 67% 85%;  /* #dcb3f2 - Soft lavender */
+    --primary-foreground: 0 0% 100%;  /* #ffffff - White text on primary */
+    
+    --secondary: 82 72% 83%;          /* #d9f2b3 - Light lime accent */
+    --secondary-foreground: #141414;  /* #000000 */
+
+    --button: 255 83% 12%;           /* #130537 - Deep purple */
+    --button-foreground: #ffffff;     /* #000000 - Black text on button */
+
+    --accent: 272 67% 83%;            /* #c3b3f2 - Muted lavender */
+    --accent-foreground: #141414;     /* #000000 */
+    --ring: #141414;              
+
+    /*//& border and inputs */
+    --border: 282 30% 75%;            /* Muted lavender border */
+    --input: 282 30% 75%;             /* Matching input borders */
+
+    /*//& status */
+    --error: #ff0156;            
+    --warning: #ffaf01;           
+    --info: 74 100% 50%;          /* #c7ff01 - the primary CTA color */ 
+    --success: #67ff01 ;    
+    --destructive: 0 84.2% 60.2%;     /* Standard red */
+    --destructive-foreground: 0 0% 100%;
+    
+    /*//& charts */
+    
+    --chart-1: 74 100% 50%;           /* #c7ff01 - the primary green */
+    --chart-2: 255 83% 12%;           /* #130537 - Deep purple */
+    --chart-3: 282 67% 85%;           /* #dcb3f2 - Lavender */
+    --chart-4: 229 67% 83%;           /* #b3c3f2 - Periwinkle */
+    --chart-5: 82 72% 83%;            /* #d9f2b3 - Light lime */
+
+    /*//& others */
+    --Soft-lavender: 282 67% 85%;  /* #dcb3f2 - Soft lavender */
+    --phosphorice: 74 100% 50%;            /* #c7ff01 */
+    
+    /*//& shap */
+    --radius: 0.375rem;    
+
+  }
+
+  .dark {
+    --background: #292929;        
+    --foreground: 0 0% 100%;          /* #ffffff - White text */
+    --text: 0 0% 100%;    
+    --text-inactive: #bdbdbd;    
+    
+    --card: 255 83% 8%;               /* Dark purple surface */
+    --card-foreground: 0 0% 100%;     /* #ffffff */
+    --popover: 255 83% 8%;
+    --popover-foreground: 0 0% 100%;
+    
+    --primary: 282 67% 85%;  /* #dcb3f2 - Soft lavender */
+    --primary-foreground: 255 83% 12%; /* #130537 - Deep purple text on white */
+    
+    --secondary: 82 72% 25%;          /* Darker lime */
+    --secondary-foreground: 0 0% 100%; /* #ffffff */
+    
+    --muted: 229 67% 25%;             /* Darker periwinkle */
+    --muted-foreground: 0 0% 70%;     /* Lighter text for contrast */
+    
+    --accent: 272 67% 25%;            /* Darker lavender */
+    --accent-foreground: 0 0% 100%;   /* #ffffff */
+    
+    --destructive: 0 70.9% 59.4%;     /* Standard */
+    --destructive-foreground: 0 0% 100%;
+    
+    --button: 74 100% 50%;            /* #c7ff01 - Keep the same! */
+    --button-foreground: #141414;     /* #000000 */
+    
+    --border: 255 83% 15%;            /* Dark border */
+    --input: 255 83% 15%;
+    --ring: 74 100% 50%;              /* Keep the green ring */
+    
+    --error: #ff0156;            
+    --warning: #ffaf01;           
+    --info: 74 100% 50%;          /* #c7ff01 - the primary CTA color */ 
+    --success: #67ff01 ; 
+
+    --chart-1: 74 100% 50%;           /* Keep vibrant green */
+    --chart-2: 282 67% 70%;           /* Lighter lavender for visibility */
+    --chart-3: 229 67% 70%;           /* Lighter periwinkle */
+    --chart-4: 82 72% 70%;            /* Lighter lime */
+    --chart-5: 255 83% 30%;           /* Lighter purple */
+  }
+
+  /* global styles */
+  .flex-center {
+    @apply flex justify-center items-center;
+  }
+}
