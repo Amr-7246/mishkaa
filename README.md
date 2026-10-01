@@ -1,4 +1,4 @@
-* Mishkaa
+## Mishkaa
 
 Mishkaa is an academic teacher-focused educational platform designed to serve the Egyptian secondary school sector.
 The platform is centered around teacher marketing and academic workflows + student all-in-one feature not just course listing app 
