@@ -81,23 +81,6 @@ Results
 
 These relationships benefit from relational constraints, structured schemas, transactions, and predictable query behavior.
 
-## Scalability Considerations
-
-Although Mishkaa is currently targeted at the Egyptian secondary school sector, the architecture is designed with future growth in mind.
-
-Potential scaling requirements include:
-
-* Increasing numbers of teachers
-* Increasing student populations
-* Large educational content libraries
-* Frequent assessment submissions
-* Increased API traffic
-* Background processing
-* File and media storage
-* Reporting and analytics
-
-The modular backend architecture allows individual domains to evolve independently as the platform grows.
-
 ## Security Considerations
 
 Security is considered across multiple layers of the application.
