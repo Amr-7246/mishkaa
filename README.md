@@ -1,7 +1,7 @@
 ## Mishkaa
 
-Mishkaa is an academic teacher-focused educational platform designed to serve the Egyptian secondary school sector.
-The platform is centered around teacher marketing and academic workflows + student all-in-one feature not just course listing app 
+* Mishkaa is an academic teacher-focused educational platform designed to serve the Egyptian secondary school sector.
+* The platform is centered around teacher marketing and academic workflows + student all-in-one feature not just course listing app 
 
 ## Project Overview
 
@@ -24,82 +24,16 @@ Mishkaa aims to serve both:
 
 The architecture is designed so additional educational features can be introduced without requiring major changes to the existing system.
 
-## Target Market
-
-Mishkaa is currently designed for the Egyptian secondary school sector.
-
-The initial target audience includes:
-
-* Secondary school teachers
-* Students
-* Educational content providers
-* Platform administrators
-
-The system can potentially be extended to support additional educational levels, subjects, institutions, and educational business models.
-
 ## Technology Stack
 
 ### Frontend
 
-* TypeScript
-* ReactNative
-* Expo
+* TypeScript | ReactNative | Expo
 * Modern component-based UI architecture (react native reusables)
 * tansStack (reactQuery) + Axios (network layer)
 
 ### Backend + DB
-
-* Node.js
-* TypeScript
-* NestJS
-* typeOrm
-* Cloudflare
-* PostgreSQL
-
-## Architecture
-## Backend Structure
-## Teacher Dashboard
-## Content Management
-
-## Data Modeling
-
-PostgreSQL is used as the primary relational database.
-
-A relational database was selected because the application's core domain contains strongly connected entities such as:
-
-```text
-Users
-Teachers
-Students
-Courses
-Content
-Assessments
-Questions
-Submissions
-Results
-```
-
-These relationships benefit from relational constraints, structured schemas, transactions, and predictable query behavior.
-
-## Security Considerations
-
-Security is considered across multiple layers of the application.
-
-Key considerations include:
-
-* Authentication
-* Role-based authorization
-* Request validation
-* Protected API endpoints
-* Secure password handling
-* Environment-based secrets
-* Input sanitization
-* Controlled data access
-* Server-side permission enforcement
-
-Sensitive configuration values are kept outside the source code through environment variables.
-
-## Engineering Decisions
+* Node.js | TypeScript | NestJS | typeOrm | Cloudflare | PostgreSQL
 
 ### Why TypeScript?
 
@@ -117,119 +51,14 @@ Next.js provides a flexible React-based framework for building the web applicati
 
 The educational domain contains many strongly related entities and transactional workflows. PostgreSQL provides relational integrity, transactions, indexing, and mature querying capabilities suitable for this type of application.
 
+## Architecture
+## Backend Structure
+## Teacher Dashboard
+## Content Management
+
+## Data Modeling
+## Security Considerations
+## Engineering Decisions
+
+
 ## Challenges
-
-## Future Improvements
-
-Potential future development areas include:
-
-* Advanced student performance analytics
-* More comprehensive assessment capabilities
-* Real-time notifications
-* Advanced educational content management
-* Search and filtering improvements
-* Recommendation systems
-* Automated reporting
-* Background job processing
-* Caching
-* Advanced administrative analytics
-* Mobile applications
-* Expanded support for additional educational levels
-* Integration with external educational services
-
-## Project Status
-
-Mishkaa is currently an evolving project focused on the Egyptian secondary education market.
-
-The current implementation establishes the core architecture and domain model required for further development of the platform.
-
-## Repository Structure
-
-A simplified representation of the project structure:
-
-```text
-mishkaa/
-|
-+-- expo/
-|   +-- components/
-|   +-- pages/
-|   +-- features/
-|   +-- hooks/
-|   +-- services/
-|   +-- types/
-|
-+-- nest/
-|   +-- modules/
-|   +-- common/
-|   +-- guards/
-|   +-- decorators/
-|   +-- services/
-|   +-- database/
-|
-+-- README.md
-```
-
-The exact structure may evolve as additional domain modules are introduced.
-
-## Running the Project
-
-Clone the repository:
-
-```bash
-git clone <repository-url>
-cd mishkaa
-```
-
-Install dependencies:
-
-```bash
-npm install
-```
-
-Create the required environment configuration:
-
-```bash
-cp .env.example .env
-```
-
-Configure the required environment variables.
-
-Start the development environment:
-
-```bash
-npm run dev
-```
-
-The exact commands may vary depending on the frontend and backend workspace configuration.
-
-## Environment Variables
-
-Environment-specific configuration should be provided through environment variables rather than committed to the repository.
-
-Typical configuration may include:
-
-```env
-DATABASE_URL=
-JWT_SECRET=
-API_URL=
-NEXT_PUBLIC_API_URL=
-```
-
-Never commit production secrets or private credentials to the repository.
-
-## Development Philosophy
-
-Mishkaa is developed around several principles:
-
-* Keep business logic independent from presentation logic
-* Prefer modular architecture over tightly coupled features
-* Validate data at system boundaries
-* Enforce authorization on the server
-* Design database relationships explicitly
-* Keep APIs predictable and maintainable
-* Build features around real educational workflows
-* Prefer extensibility over premature complexity
-
-## Author
-
-Developed as a full-stack software engineering project with a focus on educational technology, scalable application architecture, and real-world business workflows.
