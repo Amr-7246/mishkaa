@@ -55,10 +55,18 @@ The educational domain contains many strongly related entities and transactional
 ## Backend Structure
 ## Teacher Dashboard
 ## Content Management
-
 ## Data Modeling
 ## Security Considerations
 ## Engineering Decisions
-
-
 ## Challenges
+
+## Preview
+* Note: the Project still in the dev mode so these is the AI generated UI that I follow it as a reference, <strong>the actual screens will be added later</strong>
+<img src="docs/screens/home.png" alt="Preview" width="430">
+<img src="docs/screens/teacher_dashboard.png" alt="Preview" width="430">
+<img src="docs/screens/addCourseScreens/s1.png" alt="Showcase" width="430">
+<img src="docs/screens/addCourseScreens/step2.png" alt="Showcase" width="430">
+<img src="docs/screens/addCourseScreens/s3.png" alt="Showcase" width="430">
+<img src="docs/screens/addCourseScreens/s4.png" alt="Showcase" width="430">
+
+More project visuals and promotional material are available in the [`docs`](./docs) directory.
