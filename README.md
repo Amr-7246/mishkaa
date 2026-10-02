@@ -1,19 +1,19 @@
 ## Mishkaa
 
 * Mishkaa is an academic teacher-focused educational platform designed to serve the Egyptian secondary school sector.
-* The platform is centered around teacher marketing and academic workflows + student all-in-one feature not just course listing app 
+* The platform is centered around both, teacher marketing and academic workflows + student all-in-one feature not just course listing app 
 
-## Project Overview
+## Features
 
-
-Mishkaa aims to serve both: 
-* Teacher.. via providing him centralized platform for marketing themselves and managing their academic activities instead of relying on disconnected tools and manual workflows.
-* Student.. via providing him centralized platform that prevent his distraction between more than teacher website or youtube channels.
+Good to know that Mishkaa supposed to serve both: 
+* Teacher.. Via providing him a centralized platform for marketing themselves and managing their academic activities instead of relying on disconnected tools and manual workflows.
+* Student.. Via providing him a centralized platform that prevent his distraction between more than teacher website or youtube channels.
 
 ### Teacher features 
 * Treat the teacher portfolio as the thing to market instead of the plain courses
 * Secured courses hosting which is critical for them
 * Do the heavy load of the technical work instead of overwhelming the teacher of it
+* Well created teacher profile that reflects his skills
 * Dashboard provides the usual structured environment for managing educational content, students, assessments, academic activities, and the operational processes surrounding secondary education
 
 ### Student features 
@@ -22,7 +22,7 @@ Mishkaa aims to serve both:
 * Tracking academic activities
 * Supporting structured academic workflows
 
-The architecture is designed so additional educational features can be introduced without requiring major changes to the existing system.
+Note: The architecture is designed so additional educational features can be introduced without requiring major changes to the existing system.
 
 ## Technology Stack
 
@@ -43,30 +43,47 @@ TypeScript provides static typing across the frontend and backend, reducing inco
 
 NestJS provides a structured architecture for Node.js applications and encourages modularity, dependency injection, separation of concerns, and testable business logic.
 
-### Why Next.js (later)?
-
-Next.js provides a flexible React-based framework for building the web application while supporting different rendering and data-fetching strategies as the platform evolves.
-
 ### Why PostgreSQL?
 
 The educational domain contains many strongly related entities and transactional workflows. PostgreSQL provides relational integrity, transactions, indexing, and mature querying capabilities suitable for this type of application.
 
-## Architecture
+<!-- ## Architecture
 ## Backend Structure
 ## Teacher Dashboard
 ## Content Management
 ## Data Modeling
 ## Security Considerations
 ## Engineering Decisions
-## Challenges
+## Challenges -->
 
 ## Preview
 * Note: the Project still in the dev mode so these is the AI generated UI that I follow it as a reference, <strong>the actual screens will be added later</strong>
-<img src="docs/screens/home.png" alt="Preview" width="430">
-<img src="docs/screens/teacher_dashboard.png" alt="Preview" width="430">
-<img src="docs/screens/addCourseScreens/s1.png" alt="Showcase" width="430">
-<img src="docs/screens/addCourseScreens/step2.png" alt="Showcase" width="430">
-<img src="docs/screens/addCourseScreens/s3.png" alt="Showcase" width="430">
-<img src="docs/screens/addCourseScreens/s4.png" alt="Showcase" width="430">
+<table width="100%">
+  <tr>
+    <td align="center" width="50%">
+      <img src="docs/screens/home.png" alt="Preview" width="100%">
+    </td>
+    <td align="center" width="50%">
+      <img src="docs/screens/teacher_dashboard.png" alt="Preview" width="100%">
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <img src="docs/screens/addCourseScreens/s1.png" alt="Showcase" width="100%">
+    </td>
+    <td align="center" width="50%">
+      <img src="docs/screens/addCourseScreens/step2.png" alt="Showcase" width="100%">
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <img src="docs/screens/addCourseScreens/s3.png" alt="Showcase" width="100%">
+    </td>
+    <td align="center" width="50%">
+      <img src="docs/screens/addCourseScreens/s4.png" alt="Showcase" width="100%">
+    </td>
+  </tr>
+</table>
+
 
 More project visuals and promotional material are available in the [`docs`](./docs) directory.
